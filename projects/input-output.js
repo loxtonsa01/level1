@@ -37,6 +37,9 @@ alert('This program will help you build a basic mihi.\n\nMihi (greeting) is an e
   alert('Tēnā koutou,\n' + 'Tēnā koutou,\n' + 'Tēnā koutou, katoa.')
 }
 
+
+
+
 function nonMaoriMihi() {
 alert('This program will help you build a basic mihi.\n\nMihi (greeting) is an extremely important part of Māori culture. Before speaking in a formal setting (such as a marae) it is expected that you annonuce who you are and where you come from with a mihi. Through a mihi, others can make connections with your pepeha (iwi affiliations to particular natural landmarks) and your whakapapa/genealogy. A mihi has strong spiritual significance as you are speaking on behalf of your tīpuna (ancestors) as well as bringing them along for your kōrero.')
   
@@ -76,6 +79,9 @@ alert('This program will help you build a basic mihi.\n\nMihi (greeting) is an e
   alert('Tēnā koutou,\n' + 'Tēnā koutou,\n' + 'Tēnā koutou, katoa.')
 }
 
+
+
+
 function theRepeater() {
  /* Create a program that asks the user for an input, and then outputs it back to them immediately. */
 
@@ -93,6 +99,9 @@ function theRepeater() {
   } else {
   alert('Error: Bad input.')
 }
+}
+
+
 
 function madLibs() {
    /* Create a program to ask the user for a series of words, and then output a short story with those words filling the gaps.
@@ -111,8 +120,10 @@ function madLibs() {
      let adjective = prompt('Give an adjective!')
 
      alert('"' + exclamation + '! He said ' + adverb + ' as he jumped into his convertible ' + noun + ' and drove off with his ' + adjective + ' wife."')
-
 }
+
+
+
 
 function converstion() {
   let name = 'Mary'
