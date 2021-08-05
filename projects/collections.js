@@ -14,7 +14,7 @@ const jobs = [
 function futureJob() {
   let index = 0
     //getting the last element in the array
-  //let lastElement = jobs[jobs.length - 1]
+  //let lastElement = jobs[jobs.length - 1];
   let randomElement = jobs[Math.floor(Math.random()*jobs.length)]
 
   alert('Your future job will be: ' + randomElement)
@@ -28,21 +28,34 @@ let subjects = [
   'English',
   'Digital Technology',
   'Science',
-  'Mathematics'
+  'Mathematics',
 ]
 
-function addSubject() {
+function subjectList() {
   let newSubject = prompt('Pick a subject.')
 
   // add a new subject to the end of the subjects array
   subjects.push(newSubject)
+//}
+
+//function subjectList() {
+  let index = prompt('What subject should be removed? 0-3')
+  
+  if (!isNaN(index)) {
+
+  if (index > -1 && index < 4) {
+
+    subjects.splice(index, 1)
+    
+  } else {
+    alert('Error: Invalid number.')
+  }
+  
+} else {
+  alert('Error: Bad input.')
 }
-
-function removeSubject() {
-  let index = subjects[subjects.length - 1]
-
-  // remove 1 subject at the index position of the subjects array
-  subjects.splice(index, 1)
+  
+  // remove 1 subject at the index position of the subjects arry
 }
 
 // #####################################
