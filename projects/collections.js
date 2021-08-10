@@ -12,12 +12,12 @@ const jobs = [
 ]
 
 function futureJob() {
-  let index = 0
+  let index = jobs[Math.floor(Math.random()*jobs.length)]
     //getting the last element in the array
-  //let lastElement = jobs[jobs.length - 1];
-  let randomElement = jobs[Math.floor(Math.random()*jobs.length)]
+  //jobs[jobs.length - 1];
+  // jobs[Math.floor(Math.random()*jobs.length)]
 
-  alert('Your future job will be: ' + randomElement)
+  alert('Your future job will be: ' + index)
 }
 
 // ####################################
@@ -31,14 +31,14 @@ let subjects = [
   'Mathematics',
 ]
 
-function subjectList() {
+function addSubject() {
   let newSubject = prompt('Pick a subject.')
 
   // add a new subject to the end of the subjects array
   subjects.push(newSubject)
-//}
+}
 
-//function subjectList() {
+function removeSubject() {
   let index = prompt('What subject should be removed? 0-3')
   
   if (!isNaN(index)) {
@@ -71,12 +71,55 @@ let numberArray = [
 ]
 
 function numberSearch() {
-  let searchTarget = 1
+  let searchTarget = prompt('What number should be found.')
   let searchResult = false
   
   numberArray.forEach( (currentNumber) => {
-    if (currentNumber == searchTarget) {
-      searchResult = true
+    alert(currentNumber)
+    // if (currentNumber == searchTarget) {
+    //  searchResult = true
+    //}
+  })
+}
+
+// #####################################
+// #### ----- Subject Details ----- ####
+// #####################################
+
+let subject = {
+  name: 'DigiTech',
+  room: 'Room 9',
+  students: 150,
+}
+
+function showSubject() {
+  alert('The subject is ' + subject.name)
+}
+
+function changeSubject() {
+  let newName = prompt()
+  subject.name = newName
+}
+
+// #####################################
+// ####### ----- Find a Pet ----- ######
+// #####################################
+
+let petRegister = [
+  { name: 'Snuggles', type: 'cat', color: 'tabby' },
+  { name: 'Socks', type: 'cat', color: 'black and white' },
+  { name: 'Dogan', type: 'dog', color: 'brown' },
+]
+
+function petSearch() {
+  let searchType = prompt()
+  let searchResult = ''
+
+  petRegister.forEach( (currentPet) => {
+    if (currentPet.type == searchType) {
+      searchResult += currentPet.name
     }
   })
+
+  alert(searchResult)
 }

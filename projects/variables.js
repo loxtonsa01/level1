@@ -1,4 +1,4 @@
-function pupperAge () {
+  function pupperAge () {
    // Write a program that takes the user's dog's age and converts it to dog years (multiply by seven).
 
 let dogHumanYears = prompt("What is your dog's age?")
