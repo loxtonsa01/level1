@@ -93,11 +93,13 @@ let subject = {
 }
 
 function showSubject() {
-  alert('The subject is ' + subject.name)
+  alert('The subject is ' + subject.name + ', it is in room ' + subject.room + ', and has ' + subject.students + ' students.')
 }
 
 function changeSubject() {
-  let newName = prompt()
+  let newName = prompt('What subject should DigiTech change to?')
+  let newRoom = prompt('What room is your suject in?')
+  let newStudent = prompt('How many students take your subject?')
   subject.name = newName
 }
 
@@ -106,20 +108,44 @@ function changeSubject() {
 // #####################################
 
 let petRegister = [
-  { name: 'Snuggles', type: 'cat', color: 'tabby' },
-  { name: 'Socks', type: 'cat', color: 'black and white' },
-  { name: 'Dogan', type: 'dog', color: 'brown' },
+  { name: 'Snuggles', type: 'Cat', color: 'Tabby', age: '3' },
+  { name: 'Socks', type: 'Cat', color: 'Black and white', age: '6' },
+  { name: 'Snoodle', type: 'Cat', color: 'Brown', age: '8' },
+  { name: 'Dogan', type: 'Dog', color: 'Brown', age: '2' },
+  { name: 'Bogan', type: 'Dog', color: 'Tabby', age: '10' },
 ]
 
 function petSearch() {
-  let searchType = prompt()
+  let searchType = prompt('what is your pet colour?')
   let searchResult = ''
 
   petRegister.forEach( (currentPet) => {
-    if (currentPet.type == searchType) {
-      searchResult += currentPet.name
+    if (currentPet.color == searchType) {
+      searchResult += currentPet.name + ', ' + currentPet.type + ', ' + currentPet.color + '. ' 
     }
   })
 
   alert(searchResult)
+}
+
+
+// #####################################
+// ###### ----- Pet Register ----- #####
+// #####################################
+
+function addPet() {
+  let newName = prompt('What should the pets name be?')
+
+  // create the new pet object
+  let newPet = {
+    name: newName,
+  }
+
+  // add the pet object to the register array
+  petRegister.push(newPet)
+}
+
+function listPets() {
+  // loop through the register array and output each pet object
+  
 }
