@@ -135,17 +135,32 @@ function petSearch() {
 
 function addPet() {
   let newName = prompt('What should the pets name be?')
+  let newType = prompt('What Breed is your pet?')
+  let newColor = prompt('What colour is your pet?')
+  let newAge = prompt('What age is your pet?')
 
   // create the new pet object
   let newPet = {
-    name: newName,
+    name: newName, 
+    type: newType, 
+    color: newColor, 
+    age: newAge,
   }
 
   // add the pet object to the register array
-  petRegister.push(newPet)
-}
+   petRegister.push(newPet)
+  
+  listPets() 
+    
+  }
 
 function listPets() {
   // loop through the register array and output each pet object
+  let wholeList = ''
   
+  petRegister.forEach( (pet) => {
+      wholeList += pet.name + ', ' + pet.type + ', ' + pet.color + ', '  + pet.age + '. \n'
+  })
+  
+  alert(wholeList)
 }

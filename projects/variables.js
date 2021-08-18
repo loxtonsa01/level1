@@ -94,25 +94,3 @@ if (!isNaN(lesson)) {
   alert('Error: Bad input.')
 }
 }
-
-// #####################################
-// ###### ----- Pet Register ----- #####
-// #####################################
-
-function addPet() {
-  let newName = prompt('What should the pets name be?')
-
-  // create the new pet object
-  let newPet = {
-    name: newName,
-  }
-
-  // add the pet object to the register array
-  petRegister.push(newPet)
-}
-
-function listPets() {
-  // loop through the register array and output each pet object
-  while
-  
-}
